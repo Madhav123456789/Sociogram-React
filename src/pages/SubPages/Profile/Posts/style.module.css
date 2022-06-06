@@ -1,0 +1,14 @@
+.postsContainer{
+    display: flex;
+    height: auto;
+    padding: 30px;
+    margin: 15px auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.noPostText{
+    font-size: 20px;
+    font-family: "Nunito";
+}

@@ -12,7 +12,7 @@ import { setPageTitle, setUserWithOperater } from '../../../app/operater';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebookSquare } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
-import merges from "../merges.module.css";
+import merges from "../../merges.module.css";
 import Footer from '../../../components/Footer/Footer';
 
 

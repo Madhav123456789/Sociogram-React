@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.profileBox{
+    margin: 10vh 0px;
+    width: 60%;
+    min-height: 70vh;
+    background: linear-gradient(209deg, #f20cab, #d91b1b);
+    border-radius: 8px;
+    padding: 0 5vw;
+}
+
+.top{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.topLeft{
+    padding: 10px;
+    width: 15%;
+    margin: 0px 5%;
+}
+
+.topRight{
+ min-width: 40%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.topOfTopRight{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.leftOfTopOfTopRight{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin-right: 5px;
+}
+
+.rightOfTopOfTopRight{
+}
+
+.midOfTopRight{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bottomOfTopRight{
+    width: 100%;
+}
+
+.bottom{
+
+}
+
+.countName{
+    margin: 5px 5px 5px 0px;
+    font-size: 21px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.counts{
+    cursor: pointer;
+    margin-right: 11px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.name{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 5px 0px;
+}
+
+.bio{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 5px 0px;
+}
+
+.optionHolder{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.active_option{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-top: 2px solid white;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+.options{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-top: 2px solid transparent;
+    padding-top: 8px;
+}
+
+.options:hover{
+    color: rgba(255, 255, 255, 0.836);
+}
+
+.profilePic{
+    transition: all 0.4s;
+}
+
+.profilePic:hover{
+    opacity: 0.80;
+}

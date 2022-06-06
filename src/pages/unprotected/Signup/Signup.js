@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import style from "./style.module.css";
 import Footer from '../../../components/Footer/Footer';
-import merges from "../merges.module.css";
+import merges from "../../merges.module.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 import Button from '../../../components/Button/Button';

@@ -14,6 +14,7 @@ import Otpverification from "./pages/unprotected/OtpVerification/Otpverification
 import { useReloading } from "./addons/hooks/useReloading";
 import Forgotpassword from "./pages/unprotected/ForgetPassword/ForgetPassword";
 import SelectBirthDay from "./pages/semiprotected/SelectBirthDay";
+import Profile from "./pages/protected/Profile/Profile";
 
 function App() {
   // eslint-disable-next-line
@@ -82,6 +83,11 @@ function App() {
           {/* Home Page */}
           <Route path="/home" exact element={<Protected isAuth={isAuth} user={user}>
             <Home />
+          </Protected>} />
+
+          {/* Profile Page */}
+          <Route path="/profile" exact element={<Protected isAuth={isAuth} user={user}>
+            <Profile />
           </Protected>} />
         </Routes>
       </Router>

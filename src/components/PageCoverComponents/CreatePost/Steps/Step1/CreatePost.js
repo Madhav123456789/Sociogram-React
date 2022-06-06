@@ -102,7 +102,7 @@ function CreatePost({ putState }) {
       <div className={style.left}>
         <label htmlFor="uploadPost" className={`${style.uploadImage} ${src && style.colorWhite}`}>
           {!src ? <BsFillCameraFill size={70} /> :
-            <img style={{ borderRadius: "3px" }} src={src} objectFit="cover" height={"200"} width={"200"} />
+            <img style={{ borderRadius: "3px" , objectFit:"cover"}} src={src}  height={"200"} width={"200"} />
           }
         </label>
         <input accept="image/*" onChange={captureImage} style={{ display: "none" }} id="uploadPost" type="file" />

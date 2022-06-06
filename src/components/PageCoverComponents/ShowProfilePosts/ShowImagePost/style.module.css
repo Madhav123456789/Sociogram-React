@@ -31,7 +31,25 @@
 }
 
 .Right_left_Top{
-    
+    margin-left: 3px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.Name{
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.Right_left_Center{
+    height: 70%;
+    width: 100%;
+}
+
+.CommentsContainer{
+    width: 100%;
+    height: 100%;
 }
 
 .Right_Right{
