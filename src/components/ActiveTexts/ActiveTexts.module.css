@@ -1,0 +1,9 @@
+.ActiveTexts{
+    color: rgb(0, 149, 246);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.ActiveTexts:hover{
+    color: #0067f6;
+}

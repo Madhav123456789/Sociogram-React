@@ -1,0 +1,37 @@
+/* importing nunito font family from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+.inputHolder{
+    position: relative;
+    align-items: center;
+}
+
+.input{
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    width: 17vw;
+    padding: 5px 6px;
+    border: 1px solid #00000052;
+    outline: none;
+    border-radius: 3px;
+    /* text-align: center; */
+}
+
+.minMax{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input:hover{
+    box-shadow: 0px 0px 3px -1px black;
+}
+
+.shadow{
+    box-shadow: 0px 0px 3px -1px black;
+}
+

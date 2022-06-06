@@ -1,0 +1,39 @@
+.bd_cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    padding: 2px;
+}
+
+.bd_lable_cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.select{
+    border: 1px solid #00000033;
+    outline: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 53px;
+    padding: 5px;
+    font-family: 'Nunito';
+    font-size: 15px;
+    margin: 0px 10px;
+}
+
+.select1{
+    border: 1px solid #00000033;
+    outline: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 70px;
+    padding: 5px;
+    font-family: 'Nunito';
+    font-size: 15px;
+    margin: 0px 10px;
+}

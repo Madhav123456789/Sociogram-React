@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.custombtn{
+    min-width: 12vw;
+    max-width: 30vw;
+    min-height: 6vh;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff4700;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.btnTitle{
+    font-family: 'Nunito';
+    font-weight: 900;
+    padding: 0px 10px;
+    color: white;
+    font-size: 16px;
+    background-color: transparent!important;
+}
+
+.mr{
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent{
+    background-color: transparent!important;
+}

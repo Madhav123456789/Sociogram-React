@@ -1,0 +1,17 @@
+.foot{
+    width: 55%;
+    margin: 0px auto 40px auto;
+}
+
+.itemHolder{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.addMargin{
+    margin: 2px 5px;
+    font-size: 12px;
+}

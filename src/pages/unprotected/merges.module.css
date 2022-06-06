@@ -1,0 +1,8 @@
+.footerRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px auto;
+    width: 85%;
+}
