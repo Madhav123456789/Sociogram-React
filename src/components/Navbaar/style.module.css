@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.navbaar{
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    margin: auto;
+    background-color: white;
+    border-bottom: 1px solid #00000029;
+    padding-top: 5px;
+    z-index: 100;
+}
+
+.logoText{
+    font-family: 'Cookie', cursive;
+    background: -webkit-linear-gradient(#cd0e0e, #c01bce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: 600;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+.search{
+    border: 1px solid #00000057;
+    height: 32px;
+    width: 170px;
+    border-radius: 12px;
+    outline: none;
+    padding: 0px 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+}
+
+.left{
+    width: 20%;
+}
+
+.right{
+    width: 30%;
+}
+
+.center{
+    width: 20%;
+    justify-content: space-around!important;
+    margin-left: 10px;
+}
+
+.nav_childrens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gradient{
+   color: #bc119f;
+}
+
+.profile{
+    min-width: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

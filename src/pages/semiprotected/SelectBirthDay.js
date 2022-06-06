@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setUser } from '../../app/user';
 import style from "./style.module.css";
+import { setPageTitle } from '../../app/operater';
 
 function SelectBirthDay() {
     // initializing dispatch
@@ -52,6 +53,8 @@ function SelectBirthDay() {
 
     // all date logic here
     useEffect(() => {
+        // setting title of the page
+        dispatch(setPageTitle("select birthday"));
         if ($31Days.includes(month) || month.length < 1) {
             setDateArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]);
         } else if (month === "Feb") {
