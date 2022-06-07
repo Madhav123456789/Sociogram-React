@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 import { BsThreeDots } from "react-icons/bs";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { needGetOnePost, needLikeAPost, needPostAComment, needPostDeletion } from "../../../../apis/posts";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -45,9 +45,9 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
   }, [post]);
   // setting isLike conditionally
   useEffect(() => {
-    if(isLike){
+    if (isLike) {
       setIsLike(false);
-    }else{
+    } else {
       setIsLike(true);
     }
   }, [userLikes]);
@@ -135,9 +135,9 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
   };
 
   // on change for comment input
-  const onInputCommentHandler = (e) => {
-    setInputComment(e.target.value);
-  };
+  const onInputCommentHandler = useCallback((e) =>
+    setInputComment(e.target.value)
+  );
 
   // this is on click function for send comment btn
   const sendComment = async () => {
@@ -149,13 +149,13 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
         console.log(comments);
         if (flag) {
           toast.success(msg);
-          setPosComments(postComments.concat(comments[comments.length-1]));
+          setPosComments(comments);
         }
       } catch (error) {
         if (error.response) {
           toast.error(error.response.data.msg);
         }
-      }finally{
+      } finally {
         setInputComment("");
       }
     }
@@ -181,7 +181,17 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
         toast.error(error.response.data.msg);
       }
     }
-  }
+  };
+
+  // press enter key
+  useEffect(() => {
+    window.onkeyup = (e) => {
+      if (e.key === "Enter") {
+        document.getElementById("comment_btn").click();
+      }
+    }
+  }, []);
+
 
   return (
     <div onClick={closeMenu} className={style.Container}>
@@ -196,10 +206,10 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
           </div>
 
           <div className={style.Right_left_Center}>
-            <div className={style.CommentsContainer}>
-              {postComments.reverse().map((c , i) => {
-                return <Comment needSetComment={setPosComments} key={i} comment={c} username={username} src={profile} postId={post._id}/>
-              })}
+            <div className={postComments.length>0?style.CommentsContainer:style.CommentsContainerCenter}>
+              {postComments.length > 0 ? postComments.map((c, i) => {
+                return <Comment needSetComment={setPosComments} key={i} comment={c} postId={post && post._id} />
+              }):"No Comments Yet"}
             </div>
             <div style={{ cursor: "pointer" }} className={style.postActions}>
               <div onClick={likeThisPost}>
@@ -216,7 +226,9 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
           </div>
           <div className={style.Right_left_Bottom}>
             <input value={inputComment} onChange={onInputCommentHandler} placeholder={inputPlaceHolder} type={"text"} maxLength="300" className={style.textBox} />
-            <IoMdSend onClick={sendComment} color={sendBtnColor} size={"30"} />
+            <div id={"comment_btn"} onClick={sendComment}>
+              <IoMdSend color={sendBtnColor} size={"30"} />
+            </div>
           </div>
         </div>
         <div className={style.Right_Right}>

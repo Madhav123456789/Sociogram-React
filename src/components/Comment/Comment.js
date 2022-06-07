@@ -8,8 +8,26 @@ import { needDeleteComment } from "../../apis/posts";
 import { useEffect, useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { needGetOneUser } from "../../apis/user";
 
-function Comment({comment , username , src , postId , setDetails , index , needSetComment}) {
+function Comment({comment , username , src , postId , needSetComment}) {
+  // this state will be used to contain user
+  const [user , setUser] = useState({profile:"" , username:""});
+  // finding and setting user
+  useEffect(()=>{
+    needGetOneUser(comment.userid)
+    .then(res=>{
+      const {user , flag} = res.data;
+      if(flag){
+        setUser(user);
+      }
+    })
+    .catch(err=>{
+      if(err.response){
+        console.log(err.response.data.msg);
+      }
+    })
+  },[])
   // this state will manage like counts
   const [likeCounts , setLikeCounts] = useState(comment.likes.length);
   // this function will be used to delete comment
@@ -30,12 +48,12 @@ function Comment({comment , username , src , postId , setDetails , index , needS
   return (
     <div className={style.Container}>
       <div className={style.Left}>
-        <ProgressiveImg src={src} style={{ borderRadius: "50%" }} height={"30px"} width={"30px"} />
+        <ProgressiveImg src={user!==null&&user.profile} style={{ borderRadius: "50%" }} height={"30px"} width={"30px"} />
       </div>
       <div className={style.Mid}>
         <div className={style.Mid_Top}>
           <div className={style.Mid_Top_Left}>
-            <LinkText className={style.fontSize} text={username} />
+            <LinkText className={style.fontSize} text={user!==null&&user.username} />
           </div>
           <div className={style.Mid_Top_Right}>
             <p className={style.fontSizeL + " " + style.commentText}>{comment.comment}</p>

@@ -67,6 +67,17 @@
     overflow-y: auto;
 }
 
+.CommentsContainerCenter{
+    width: 100%;
+    height: 90%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.055);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.055);
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* for making scroll bar hide  */
 .CommentsContainer::-webkit-scrollbar {
     width: 0px;
