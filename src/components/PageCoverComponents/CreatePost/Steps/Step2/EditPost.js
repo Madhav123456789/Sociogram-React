@@ -156,7 +156,7 @@ function EditPost({ putState }) {
       ://else
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }} className={style.editor}>
         <div className={style.left}>
-          {Src && <ProgressiveImg id="EditModeImage" src={Src} height={"250"} width={"250"} style={{objectFit:"cover"}} className={style.postImg} />}
+          {Src && <ProgressiveImg id="EditModeImage" src={Src} height={"250px"} width={"250px"} style={{objectFit:"cover"}} className={style.postImg} />}
         </div>
         <div className={style.right}>
           <div className={style.filterTitle}>Filters</div>

@@ -1,0 +1,84 @@
+.Container{
+    width: 100%;
+    display: flex;
+    background-color: white;
+    min-height: 10vh;
+    margin: 5px 0px;
+}
+
+.Left{
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+.Mid{
+    width: 80%;
+}
+
+.Mid_Top{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.commentText{
+    margin-top: 5px;
+    margin-left: 5px;
+    word-break: break-word;
+}
+
+.fontSize{
+    font-size: 65%;
+}
+
+.fontSizeL{
+    font-size: 80%;
+}
+
+.Mid_Bottom{
+    width: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+.Mid_Bottom_Top{
+    margin-top: 5px;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Mid_Bottom_Bottom{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.fontForMidBottom{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.621);
+}
+
+.Right{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+    margin-top: 5px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

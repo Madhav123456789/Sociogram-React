@@ -29,7 +29,7 @@ export const pagecoverSlice = createSlice({
     // profile post on click
     setProfilePostOnClick(state , action){
       state.stateProfilePostsOnClick.state = action.payload;
-    }
+    },
   },
 })
 

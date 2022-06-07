@@ -17,7 +17,7 @@ function Posts({ isOwnerProfile, data }) {
   const { state: stateProfilePostsOnClick } = useSelector(s => s.pagecover.stateProfilePostsOnClick);
 
   // getting user posts from redux user state
-  const { posts: userPosts  , profile , name} = useSelector(s => s.user.user);
+  const { posts: userPosts  , profile , name , username , _id} = useSelector(s => s.user.user);
 
   // creating posts state
   const [posts, setPosts] = useState([]);
@@ -53,8 +53,8 @@ function Posts({ isOwnerProfile, data }) {
       </div>
 
       {/* this is page cover for showing clicked post */}
-      <PageCover isVisible={stateProfilePostsOnClick} putVisbleRef={setProfilePostOnClick} needWidth={"60vw"} needHeight={"80vh"}>
-        <ShowImagePost isOwner={isOwnerProfile} post={posts[index]} profile={profile} name={name} index={index} putIndex={setIndex} postMaxLength={posts.length}/>
+      <PageCover isVisible={stateProfilePostsOnClick} putVisbleRef={setProfilePostOnClick} needWidth={"80vw"} needHeight={"80vh"}>
+        <ShowImagePost isOwner={isOwnerProfile} post={posts[index]} profile={profile} username={username} _id={_id} name={name} index={index} putIndex={setIndex} postMaxLength={posts.length}/>
       </PageCover>
     </>
   )

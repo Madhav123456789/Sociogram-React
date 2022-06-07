@@ -81,6 +81,14 @@ function CreatePost({ putState }) {
         reader.onloadend = () => {
           toast.success("Post image has been selected");
           setSrc(reader.result);
+          // checking if title less than 5 character it will be focused after image uploading
+          if(document.getElementById("create_post_title").value.length < 5){
+            document.getElementById("create_post_title").focus();
+          }
+          // checking if description less than 10 character it will be focused after image uploading
+          else if(document.getElementById("create_post_description").value.length<10){
+            document.getElementById("create_post_description").focus();
+          }
           // console.log(reader.result);
         }
       } else {
@@ -108,8 +116,8 @@ function CreatePost({ putState }) {
         <input accept="image/*" onChange={captureImage} style={{ display: "none" }} id="uploadPost" type="file" />
       </div>
       <div className={style.right}>
-        <Materialnput min={5} showOnType value={title} onChange={onChangeTitle} placeholder={"Title"} increamentVal={title.length} max={25}/>
-        <Materialnput min={10} showOnType value={description} onChange={onChangeDescription} placeholder={"Description"} increamentVal={description.length} max={150}/>
+        <Materialnput id={"create_post_title"} min={5} showOnType value={title} onChange={onChangeTitle} placeholder={"Title"} increamentVal={title.length} max={25}/>
+        <Materialnput id={"create_post_description"} min={10} showOnType value={description} onChange={onChangeDescription} placeholder={"Description"} increamentVal={description.length} max={150}/>
         <select onChange={categoryHandler} value={category} className={style.select} name="date" id="date">
           {postCategories.map((item) => {
             return <option key={item} value={item}>{item}</option>

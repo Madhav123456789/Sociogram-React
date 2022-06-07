@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .Left{
@@ -13,6 +14,11 @@
     justify-content: center;
     height: 100%;
     width: 50%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
 }
 
 .Right{
@@ -21,13 +27,13 @@
     justify-content: center;
     height: 100%;
     width: 45%;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .Right_left{
     height: 100%;
     width: 85%;
-    background-color: lawngreen;
+    /* background-color: lawngreen; */
 }
 
 .Right_left_Top{
@@ -35,6 +41,11 @@
     height: 10%;
     display: flex;
     align-items: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
 }
 
 .Name{
@@ -45,17 +56,73 @@
 .Right_left_Center{
     height: 70%;
     width: 100%;
+    margin-top: 5px;
 }
 
 .CommentsContainer{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.055);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.055);
+    overflow-y: auto;
+}
+
+/* for making scroll bar hide  */
+.CommentsContainer::-webkit-scrollbar {
+    width: 0px;
+    /* display: none; */
+}
+
+.CommentsContainer::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+.CommentsContainer::-webkit-scrollbar-thumb {
+    height: 0px;
+    border-radius: 8px;
+    border: 0px solid transparent;
+    background-clip: content-box;
+    background-color: rgba(136, 136, 136, 0);
+}
+
+.CommentsContainer::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(136, 136, 136, 0);
+}
+
+.postActions{
+    margin-top: 5px;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Right_left_Bottom{
+    margin-top: 15px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.textBox{
+    margin-right: 5px;
+    font-size: 15px;
+    border: 0.5px solid rgba(0, 0, 0, 0.454);
+    outline: none;
+    width: 75%;
+    padding: 5px;
+    border-radius: 2px;
+    caret-color: rgba(0, 0, 0, 0.372);
 }
 
 .Right_Right{
-    background-color: red;
     height: 100%;
     width: 15%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
 }
 
 .Right_Right_Top{

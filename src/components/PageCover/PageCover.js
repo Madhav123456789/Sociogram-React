@@ -59,7 +59,7 @@ function PageCover({ isVisible = false, children, putVisbleRef, needHeight, need
       <div ref={pageCoverRef} onClick={closePageCover} className={style.pagecover}>
         <div ref={compoRef} style={needHeight && needWidth && { height: needHeight, width: needWidth }} onClick={onComponentClick} className={style.component}>
           <div className={style.btnHolder}>
-            <div >{title && String(title).substring(0, 30)}</div>
+            <div className={style.title}>{title && String(title).substring(0, 30)}</div>
             <IoMdClose onClick={closePageCover} style={{ cursor: "pointer" }} size={30} />
           </div>
           {children}
