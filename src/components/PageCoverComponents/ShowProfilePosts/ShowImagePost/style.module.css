@@ -118,11 +118,10 @@
 .textBox{
     margin-right: 5px;
     font-size: 15px;
-    border: 0.5px solid rgba(0, 0, 0, 0.454);
+    border: none;
     outline: none;
     width: 75%;
     padding: 5px;
-    border-radius: 2px;
     caret-color: rgba(0, 0, 0, 0.372);
 }
 

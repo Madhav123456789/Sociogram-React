@@ -56,17 +56,17 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
   // state will be used to enable and disbale options menu
   const [holderState, setHolderState] = useState("none");
   // state will be used to set placeholder with dynamic strings
-  const [inputPlaceHolder, setInputPlaceHolder] = useState("write comment here");
+  const [inputPlaceHolder, setInputPlaceHolder] = useState("What's in your mind?");
   // this will contian color of send btn color
-  const [sendBtnColor, setSendBtnColor] = useState("");
+  const [sendBtnState, setSendBtnState] = useState("hidden");
   // state will be used to contain comment input text
   const [inputComment, setInputComment] = useState("");
   // checking and changing sendbtn color
   useEffect(() => {
     if (inputComment.length >= 2 && inputComment.length <= 300) {
-      setSendBtnColor("#0095f6");
+      setSendBtnState("visible");
     } else {
-      setSendBtnColor("#0000004a");
+      setSendBtnState("hidden");
     }
   }, [inputComment]);
 
@@ -227,7 +227,7 @@ function ShowImagePost({ isOwner, post, profile, name, putIndex, postMaxLength, 
           <div className={style.Right_left_Bottom}>
             <input value={inputComment} onChange={onInputCommentHandler} placeholder={inputPlaceHolder} type={"text"} maxLength="300" className={style.textBox} />
             <div id={"comment_btn"} onClick={sendComment}>
-              <IoMdSend color={sendBtnColor} size={"30"} />
+              <IoMdSend color="#0095f6" style={{visibility:sendBtnState}} size={"30"} />
             </div>
           </div>
         </div>

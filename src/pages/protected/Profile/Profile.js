@@ -12,21 +12,21 @@ import style from "./style.module.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from "../../../components/Loader/Loader";
-import {setUser} from "../../../app/user";
-import {CgProfile} from "react-icons/cg";
+import { setUser } from "../../../app/user";
+import { CgProfile } from "react-icons/cg";
 import merges from "../../merges.module.css";
-import {FiSettings} from "react-icons/fi";
-import {setPageTitle} from "../../../app/operater";
+import { FiSettings } from "react-icons/fi";
+import { setPageTitle } from "../../../app/operater";
 import ProgressiveImg from "../../../components/ProgressiveImg/ProgressiveImg";
 
 function Profile() {
     // initializing dispatch
     const dispatch = useDispatch();
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         // setting page title
         dispatch(setPageTitle("Profile"));
-    },[]);
+    }, []);
 
     // states
     const [loading, setLoading] = useState(false);
@@ -102,7 +102,7 @@ function Profile() {
                         <input accept="image/*" onChange={captureImageAndUpdateProfile} type="file" id="img-selecter" style={{ display: "none" }} />
                         <label style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }} htmlFor="img-selecter" className={style.changer}>
                             {loading && <Loader />}
-                            {profile ? <ProgressiveImg height={"120px"} width={"120px"} className={style.profilePic} style={{ cursor: "pointer", borderRadius: "50%", marginLeft: "10px" , objectFit:"cover"}}  src={profile} /> : <CgProfile style={{ cursor: "pointer" }} className={style.profilePic} size={150} />}
+                            {profile ? <ProgressiveImg height={"120px"} width={"120px"} Class={style.profilePic} style={{ cursor: "pointer", borderRadius: "50%", marginLeft: "10px", objectFit: "cover" }} src={profile} /> : <CgProfile style={{ cursor: "pointer" }} className={style.profilePic} size={150} />}
                         </label>
                     </div>
                     <div className={style.topRight}>

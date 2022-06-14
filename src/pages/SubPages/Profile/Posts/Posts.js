@@ -32,12 +32,11 @@ function Posts({ isOwnerProfile, data }) {
   }, [userPosts]);
 
   // this is on click function for Image component
-  const onImagePostClick = (e) => {
+  const onImagePostClick = (index) => {
     // turning on page cover
     dispatch(setProfilePostOnClick(true));
     // setting index
-    setIndex(e.currentTarget.id.split("_")[1]);
-    // console.log(posts[index])
+    setIndex(index);
   };
 
   return (

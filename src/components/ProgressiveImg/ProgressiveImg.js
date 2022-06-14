@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import cssStyle from "./style.module.css";
 
-function ProgressiveImg({src , style , Class , height , width , blurDataUrl , isLoading}) {
+function ProgressiveImg({src , style , Class , height , width , blurDataUrl , isLoading , id}) {
     // this state will manage loading
     const [loading, setLoading] = useState(isLoading);
     const [image , setImage] = useState(blurDataUrl);
@@ -22,7 +22,7 @@ function ProgressiveImg({src , style , Class , height , width , blurDataUrl , is
                 loading ?
                     <Loader />
                     :
-                    <img className={Class} style={{...style , height:height , width:width}} src={image} alt="" />
+                    <img id={id} className={Class} style={{...style , height:height , width:width}} src={image} alt="" />
             }
         </div>
     )
